@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,16 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				nokia: {
+					'blue': '#0059AA',
+					'light-blue': '#33C3F0',
+					'bright-blue': '#1EAEDB',
+					'deep-blue': '#0464a5',
+					'bright-blue2': '#0FA0CE',
+					'white': '#ffffff',
+					'off-white': '#f8f9fa',
+					'light-gray': '#f3f3f3',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +95,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-blue': {
+					'0%, 100%': {
+						opacity: '1',
+						boxShadow: '0 0 10px 5px rgba(51, 195, 240, 0.6)'
+					},
+					'50%': {
+						opacity: '0.8',
+						boxShadow: '0 0 15px 10px rgba(51, 195, 240, 0.8)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-blue': 'pulse-blue 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'nokia-gradient': 'linear-gradient(135deg, #0464a5 0%, #4a8fd8 100%)',
+				'nokia-card': 'linear-gradient(135deg, rgba(4, 100, 165, 0.85) 0%, rgba(74, 143, 216, 0.85) 100%)',
+				'nokia-blue-glow': 'radial-gradient(circle, rgba(51, 195, 240, 0.8) 0%, rgba(4, 100, 165, 0) 70%)',
 			}
 		}
 	},
