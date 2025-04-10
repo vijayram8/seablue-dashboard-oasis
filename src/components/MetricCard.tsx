@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Hashtag, CircleEqual, RotateCw, Triangle } from 'lucide-react';
+import { Hash, Circle, RotateCw, Triangle } from 'lucide-react';
 
 type MetricCardProps = {
   title: string;
@@ -14,15 +14,15 @@ const MetricCard: React.FC<MetricCardProps> = ({ title, value, iconType, unit, c
   const getIcon = () => {
     switch (iconType) {
       case 'chassis':
-        return <Hashtag className="h-5 w-5" />;
+        return <Hash className="h-5 w-5" />;
       case 'palette':
-        return <CircleEqual className="h-5 w-5" />;
+        return <Circle className="h-5 w-5" />;
       case 'torque':
         return <RotateCw className="h-5 w-5" />;
       case 'angle':
         return <Triangle className="h-5 w-5" />;
       default:
-        return <Hashtag className="h-5 w-5" />;
+        return <Hash className="h-5 w-5" />;
     }
   };
 
